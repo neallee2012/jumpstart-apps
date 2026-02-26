@@ -33,6 +33,6 @@ spec:
         - containerPort: 8080
         env:
         - name: MESSAGE
-          value: This is an Azure Arc GitOps Demo! 1 2 3
+          value: This is an Azure Arc GitOps Demo! 1 2 3 4 5 6
         - name: APPLICATIONINSIGHTS_CONNECTION_STRING
-          value: ""
+          value: "InstrumentationKey=08e5357e-1bc0-4205-9526-26b6ea62ea44;IngestionEndpoint=https://japaneast-1.in.applicationinsights.azure.com/;LiveEndpoint=https://japaneast.livediagnostics.monitor.azure.com/;ApplicationId=4db84578-8264-4aec-a015-000068901940"
