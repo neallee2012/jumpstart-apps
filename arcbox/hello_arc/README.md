@@ -20,6 +20,13 @@ Please refer to the repository for detailed instructions on how to build your on
 
 The container for this "Hello Arc" application can be found on [Docker Hub](https://hub.docker.com/r/liorkamrat/hello-arc). 
 
+## Azure Application Insights (Page View)
+
+`hello_arc` now supports browser page view telemetry when `APPLICATIONINSIGHTS_CONNECTION_STRING` is set for the app container.
+
+- Helm: set `appInsights.connectionString` in chart values.
+- Raw manifest: set `APPLICATIONINSIGHTS_CONNECTION_STRING` in `yaml/hello_arc.yaml`.
+
 ## Contributing
 
 Before contributing code, please see the [CONTRIBUTING](CONTRIBUTING.md) guide.

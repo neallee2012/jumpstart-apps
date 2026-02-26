@@ -17,6 +17,7 @@ app.use(morgan('combined'));
 // Configuration
 const port = process.env.PORT || 8080;
 const message = process.env.MESSAGE || "Hello Azure Arc GitOps Demo!";
+const appInsightsConnectionString = process.env.APPLICATIONINSIGHTS_CONNECTION_STRING || "";
 
 // Routes
 app.get('/', (req, res) => {
@@ -24,7 +25,9 @@ app.get('/', (req, res) => {
         message,
         platform: os.type(),
         release: os.release(),
-        hostName: os.hostname()
+        hostName: os.hostname(),
+        appInsightsEnabled: Boolean(appInsightsConnectionString),
+        appInsightsConnectionStringJson: JSON.stringify(appInsightsConnectionString)
     });
 });
 

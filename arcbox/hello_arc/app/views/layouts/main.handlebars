@@ -14,5 +14,19 @@
     </div>
   </div>
 
+  {{#if appInsightsEnabled}}
+  <script type="text/javascript" src="https://js.monitor.azure.com/scripts/b/ai.3.gbl.min.js"></script>
+  <script type="text/javascript">
+    const appInsightsConnectionString = {{{appInsightsConnectionStringJson}}};
+    const appInsights = new Microsoft.ApplicationInsights.ApplicationInsights({
+      config: {
+        connectionString: appInsightsConnectionString
+      }
+    });
+    appInsights.loadAppInsights();
+    appInsights.trackPageView();
+  </script>
+  {{/if}}
+
 </body>
 </html>

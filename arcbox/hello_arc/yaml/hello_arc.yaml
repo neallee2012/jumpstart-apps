@@ -34,3 +34,5 @@ spec:
         env:
         - name: MESSAGE
           value: This is an Azure Arc GitOps Demo! 1 2 3
+        - name: APPLICATIONINSIGHTS_CONNECTION_STRING
+          value: ""
